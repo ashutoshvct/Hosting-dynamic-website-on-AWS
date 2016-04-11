@@ -3,60 +3,60 @@
 
 1. Go on AWS management Console.
    
-   Then click Services.
+   > Then click Services.
    
-   Then click RDS.
+   > Then click RDS.
 
 
 2. In the left panel select Subnet Groups.
     
-   Click on create DB Subnet group.
+   > Click on create DB Subnet group.
    
-    Enter the name and description for it.
+   > Enter the name and description for it.
    
-    Select the VPC id from the drop down.
+   > Select the VPC id from the drop down.
    
-    Now click on add all subnet.
+   > Now click on add all subnet.
    
-    Now click Create.
+   > Now click Create.
 
 
 3. Now from the left panel click on Instances.
     
-   Click on launch DB Instance.
+   > Click on launch DB Instance.
    
-    Select MySql or the database of your choice and click next.
+   > Select MySql or the database of your choice and click next.
 <b>(Here we will use mysql database for the demo)</b>
     
-   Click dev/test and next step.
+   > Click dev/test and next step.
    
-    Select the instance of your type.
+   > Select the instance of your type.
    
-    In Multi-AZ deployment, Select No option.
+   > In Multi-AZ deployment, Select No option.
    
-    Then, in storage type according to your need.
+   > Then, in storage type according to your need.
    
-    Enter the Database identifier and other details.
+   > Enter the Database identifier and other details.
 <b>(Please note it down somewhere because we would need this)</b>
     
-   Click Next.
+   > Click Next.
    
-    Select the default VPC.
+   > Select the default VPC.
    
-    Select the subnet group that we created.
+   > Select the subnet group that we created.
    
-    Set publically accessible to NO.
+   > Set publically accessible to NO.
 
 
 <b>(For this step you need to go to VPC service and copy your VPC CIDR)</b>
     
-   Now create a new security group and add a rule.
+   > Now create a new security group and add a rule.
    
-    Select type Mysql/Aurora-->portrange will be 3306-->type the VPC CIDR in source.
+   > Select type Mysql/Aurora-->portrange will be 3306-->type the VPC CIDR in source.
    
-    Click create.
+   > Click create.
    
-    Now leave everything default and then click Launch DB Instance.
+   > Now leave everything default and then click Launch DB Instance.
 
 
 Now we have created an DB instance.
