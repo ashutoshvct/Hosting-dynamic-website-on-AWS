@@ -1,14 +1,17 @@
 #Creating an instance for database using RDS
 
+
 1. Go on AWS management Console.
    Then click Services.
    then click RDS.
+
 2. In the left panel select Subnet Groups.
     Click on create DB Subnet group.
     Enter the name and description for it.
     Select the VPC id from the drop down.
     Now click on add all subnet.
     Now click Create.
+
 3. Now from the left panel click on Instances.
     Click on launch DB Instance.
     Select MySql or the database of your choice and click next.
@@ -29,7 +32,9 @@
     Click create.
     Now leave everything default and then click Launch DB Instance.
 
+
 Now we have created an DB instance.
+
 
 4. Download and install mysql Workbench.
     Now open it.
@@ -50,7 +55,9 @@ Now we have created an DB instance.
     Now click on test connection to test it.
     If connection was successful click ok.
 
+
 Now, we have established a very secure connection to our database instance.
+
 
 5. Now, Create a new database and name it whatever you want.
 (No need to create a new one if you have already created)
