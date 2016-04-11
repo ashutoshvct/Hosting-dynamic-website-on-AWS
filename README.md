@@ -1,8 +1,12 @@
 # Hosting-dynamic-website-on-AWS
 
-<b>I will use the following services - EC2, Route 53, CloudFront, RDS and VPC.
+> If you need any help please contact me on ashutosh.vct@gmail.com 
+
+<b>We will use the following services - EC2, Route 53, CloudFront, RDS and VPC.
 
 We will also use softwares like FileZilla and Mysql Workbench.
+
+> The scenario: We will move the website hosting to AWS. We already have a website and a database. We just need to migrate them to AWS.
 </b>
 
 1. We will now migrate your domain to route 53<b>(Follow these steps from the file called Route53)</b>.
