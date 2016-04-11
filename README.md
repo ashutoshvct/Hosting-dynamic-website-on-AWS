@@ -17,6 +17,6 @@ We will also use softwares like FileZilla and Mysql Workbench.
 
 6. Again we will have to make changes in Route53<b> (Follow Steps from file called route 53-v1)</b>.
 
-7.<b> Now your website is Live with cloudfont in it.</b>
+7. <b> Now your website is Live with cloudfont in it.</b>
 
 
