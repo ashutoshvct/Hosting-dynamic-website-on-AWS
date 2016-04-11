@@ -4,6 +4,7 @@
 
 We will also use softwares like FileZilla and Mysql Workbench.
 </b>
+
 1. We will now migrate your domain to route 53<b>(Follow steps from file called Route 53)</b>.
 
 2. Check that you have a Default VPC, If you don't have it or accidentally deleted it create a case in AWS Support Center for a new one.
