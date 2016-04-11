@@ -8,13 +8,13 @@
 3. Choose Amazon Linux AMI 2016---->Select the instance type you want and then click Next.
 
 4. Leave everything default and check if the VPC is Default or not.
-(If not please choose the default one)
+<b>(If not please choose the default one)</b>
 
 5. Next add Storage enter the size you want for your instance and then click next .
-(The default size is 8GB)
+<b>(The default size is 8GB)</b>
 
 6. Now, tag your instance, In key enter Name and in Value enter anything you will remember your instance with like "mywebsite".
-(Please do not use double inverted quotes as i have used)
+<b>(Please do not use double inverted quotes as i have used)</b>
 
 7. Now, click next configure Security Groups--->create new security group-->Enter security group name and description for it.
 
@@ -27,26 +27,26 @@
 9. Click on review and launch, here you can confirm your selections and click launch.
 
 10. It will now ask for a key, create a new one and download it to your pc.
-(we will require it for connecting to our instance. Please do not loose this Key.)
+<b>(we will require it for connecting to our instance. Please do not loose this Key.)</b>
 
 11. Now click on Elastic IPs from the left panel and click allocate new ip---> Then click actions and then associate Address-->type the tag name you gave or select the instance from the list.
 
 
-Now wait for the instance to get to the running state and status checks (2/2).
-You have now created an instance, now you will have to install an apache server on that.
+<b>Now wait for the instance to get to the running state and status checks (2/2).
+You have now created an instance, now you will have to install an apache server on that.</b>
 
 
 #Installing apache server/ Lamp webserver on the ec2 instance that you have created
 
 
 1. Click Service---> EC2--->On the left panel select instance and then select your instance.
-(You can see the tag name that you have given for the instance)
+<b>(You can see the tag name that you have given for the instance)</b>
 
 2. Click Connect ---> now go to your pc and open terminal/shell--->change the directory where you have Downloaded the key (cd /Users/xyz/Downloads) or whichever directory---> Give permission to the file by typing chmod 600 xyz.pem.
-(Your key will be in .pem format)
+<b>(Your key will be in .pem format)</b>
 
 3. Now go back to your browser and copy the example and paste it in your terminal/shell---->it will ask for authentication type yes.
-(Now you are connected to your instance)
+<b>(Now you are connected to your instance)</b>
 
 4. Type sudo yum update -y
 
@@ -59,6 +59,7 @@ You have now created an instance, now you will have to install an apache server 
     sudo chkconfig httpd on
 
 5. To check if you have successfully installed the webserver, go to EC2 instance page and select your instance and then see public DNS at the bottom of the page.
+   
     Copy that and paste in the web browser, you will see an apache server page.
 
 6. Go back to your terminal/shell/cmd.
@@ -70,12 +71,12 @@ You have now created an instance, now you will have to install an apache server 
    
    Type exit/quit.
    
-   Note exit or quit command is necessary for the changes to take place.
+  <b> Note exit or quit command is necessary for the changes to take place.</b>
 
 7. Connect to your instance again via terminal/shell/cmd.
     
    Type groups
-   (Here you will see www is added to the group)
+   <b>(Here you will see www is added to the group)</b>
     
    Type sudo chown -R root:www /var/www
     
@@ -84,7 +85,7 @@ You have now created an instance, now you will have to install an apache server 
    find /var/www -type d -exec sudo chmod 7777 {} \;
     
    find /var/www -type f -exec sudo chmod 7777 {} \;
-   (You can set the permission as per required for example : 2775 or 0664)
+   <b>(You can set the permission as per required for example : 2775 or 0664)</b>
 
 8. Test your Lamp/apache webserver
     
@@ -94,10 +95,10 @@ You have now created an instance, now you will have to install an apache server 
    
    Now go in browser and paste it and edit the url by adding /phpinfo.php
    
-   Now you can see the phpinfo page.
+  <b> Now you can see the phpinfo page.
    
    That's it you are done configuring your webserver.
-
+</b>
 
 #Adding files in your webserver via FileZilla
 
@@ -116,8 +117,8 @@ For this step please take a note of your public DNS or IP.
       
    Select yes for authentication.
 
-   <i>Now you are connected to your instance via FileZilla.</i>
+   <b>Now you are connected to your instance via FileZilla.</b>
 
 2. Go to folder var/www/html/ and paste your website.
 
-3. Now you go to your EC2 instance and paste the DNS in the web browser, you should see the website is live.
+3. <b>Now you go to your EC2 instance and paste the DNS in the web browser, you should see the website is live.</b>
