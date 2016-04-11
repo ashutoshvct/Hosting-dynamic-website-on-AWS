@@ -122,3 +122,28 @@ For this step please take a note of your public DNS or IP.
 2. Go to folder var/www/html/ and paste your website.
 
 3. <b>Now you go to your EC2 instance and paste the DNS in the web browser, you should see the website is live.</b>
+
+
+#Pointing our webserver to domain (Optional)
+
+1. Go to AWS console, then Route 53 service.
+
+2. Select the Domain name we have created.
+
+3. Now, click on Create record set.
+
+
+      Select type "A-IPv4 address".
+      
+      In the value paste the public IP of the instance.
+      
+      Then, Click Create.
+      
+      Create an another record set and now in the name field add www .
+      
+      Select type "A-IPv4 address"
+      
+      In the value paste the public IP of the instance.
+      
+      Then, Click Create.
+    
