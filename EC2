@@ -1,0 +1,41 @@
+#Creating EC2 instance for our website
+
+1. Click on Services--->Then, EC2.
+2. Click on the left panel Instances--->Then click Launch instance.
+3. Choose Amazon Linux AMI 2016---->Select the instance type you want and then click Next.
+4. Leave everything default and check if the VPC is Default or not.
+(If not please choose the default one)
+5. Next add Storage enter the size you want for your instance and then click next .
+(The default size is 8GB)
+6. Now, tag your instance, In key enter Name and in Value enter anything you will remember your instance with like "mywebsite".
+(Please do not use double inverted quotes as i have used)
+7. Now, click next configure Security Groups--->create new security group-->Enter security group name and description for it.
+8. Now, add rules to your instance-->select type SSH----> in source select my ip from drop down.
+   Add another rule-->select type HTTP--->in source select anywhere from drop down.
+   Add another rule-->select type HTTPS--->in source select anywhere from drop down.
+9. Click on review and launch, here you can confirm your selections and click launch.
+10. It will now ask for a key, create a new one and download it to your pc.
+(we will require it for connecting to our instance. Please do not loose this Key.)
+11. Now click on Elastic IPs from the left panel and click allocate new ip---> Then click actions and then associate Address-->type the tag name you gave or select the instance from the list.
+
+
+Now wait for the instance to get to the running state and status checks (2/2).
+You have now created an instance, now you will have to install an apache server on that.
+
+
+#Installing apache server/ Lamp webserver on the ec2 instance that you have created
+
+1. Click Service---> EC2--->On the left panel select instance and then select your instance.
+(You can see the tag name that you have given for the instance)
+2. Click Connect ---> now go to your pc and open terminal/shell--->change the directory where you have Downloaded the key (cd /Users/xyz/Downloads) or whichever directory---> Give permission to the file by typing chmod 600 xyz.pem.
+(Your key will be in .pem format)
+3. Now go back to your browser and copy the example and paste it in your terminal/shell---->it will ask for authentication type yes.
+(Now you are connected to your instance)
+4. Type sudo yum update -y
+        sudo yum upgrade -y
+        sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+        sudo service httpd start
+        sudo chkconfig httpd on
+5. To check if you have successfully installed the webserver, go to EC2 instance page and select your instance and then see public DNS at the bottom of the page.
+    Copy that and paste in the web browser, you will see an apache server page.
+    
