@@ -47,6 +47,7 @@
    
     Set publically accessible to NO.
 
+
 <b>(For this step you need to go to VPC service and copy your VPC CIDR)</b>
     
    Now create a new security group and add a rule.
