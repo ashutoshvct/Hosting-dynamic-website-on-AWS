@@ -7,6 +7,7 @@
    
    Then click RDS.
 
+
 2. In the left panel select Subnet Groups.
     
    Click on create DB Subnet group.
@@ -18,6 +19,7 @@
     Now click on add all subnet.
    
     Now click Create.
+
 
 3. Now from the left panel click on Instances.
     
@@ -61,7 +63,8 @@ Now we have created an DB instance.
 
 4. Download and install mysql Workbench.
    
-    Now open it.
+    
+   Now open it.
    
     Create a new connection by clicking on '+'.
    
@@ -101,7 +104,8 @@ Now, we have established a very secure connection to our database instance.
 5. Now, Create a new database and name it whatever you want.
 <b>(No need to create a new one if you have already created)</b>
   
-    In the Left panel select import/restore.
+    
+   In the Left panel select import/restore.
 
       Then select import from Self contained file and point it to our database.
 
