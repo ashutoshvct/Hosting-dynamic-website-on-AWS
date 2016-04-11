@@ -38,4 +38,24 @@ You have now created an instance, now you will have to install an apache server 
         sudo chkconfig httpd on
 5. To check if you have successfully installed the webserver, go to EC2 instance page and select your instance and then see public DNS at the bottom of the page.
     Copy that and paste in the web browser, you will see an apache server page.
-    
+6. Go back to your terminal/shell/cmd.
+    Type sudo groupadd www
+    Type sudo usermod -a -G www ec2-user
+   (Here ec2-user is your username example ec2-user@ip)
+    Type exit/quit.
+   Note exit or quit command is necessary for the changes to take place.
+7. Connect to your instance again via terminal/shell/cmd.
+    Type groups
+   (Here you will see www is added to the group)
+    Type sudo chown -R root:www /var/www
+    sudo chmod 7777 /var/www
+    find /var/www -type d -exec sudo chmod 7777 {} \;
+    find /var/www -type f -exec sudo chmod 7777 {} \;
+   (You can set the permission as per required for example : 2775 or 0664)
+8. Test your Lamp/apache webserver
+    Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+   Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
+   Now go in browser and paste it and edit the url by adding /phpinfo.php
+   Now you can see the phpinfo page.
+   
+That's it you are done configuring your webserver.
