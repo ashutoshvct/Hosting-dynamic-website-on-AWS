@@ -19,7 +19,9 @@
 7. Now, click next configure Security Groups--->create new security group-->Enter security group name and description for it.
 
 8. Now, add rules to your instance-->select type SSH----> in source select my ip from drop down.
+   
    Add another rule-->select type HTTP--->in source select anywhere from drop down.
+   
    Add another rule-->select type HTTPS--->in source select anywhere from drop down.
 
 9. Click on review and launch, here you can confirm your selections and click launch.
@@ -47,48 +49,76 @@ You have now created an instance, now you will have to install an apache server 
 (Now you are connected to your instance)
 
 4. Type sudo yum update -y
-        sudo yum upgrade -y
-        sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
-        sudo service httpd start
-        sudo chkconfig httpd on
+
+    sudo yum upgrade -y
+   
+    sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+   
+    sudo service httpd start
+   
+    sudo chkconfig httpd on
 
 5. To check if you have successfully installed the webserver, go to EC2 instance page and select your instance and then see public DNS at the bottom of the page.
     Copy that and paste in the web browser, you will see an apache server page.
 
 6. Go back to your terminal/shell/cmd.
-    Type sudo groupadd www
-    Type sudo usermod -a -G www ec2-user
+   
+   Type sudo groupadd www
+   
+   Type sudo usermod -a -G www ec2-user
    (Here ec2-user is your username example ec2-user@ip)
-    Type exit/quit.
+   
+   Type exit/quit.
+   
    Note exit or quit command is necessary for the changes to take place.
 
 7. Connect to your instance again via terminal/shell/cmd.
-    Type groups
+    
+Type groups
    (Here you will see www is added to the group)
-    Type sudo chown -R root:www /var/www
-    sudo chmod 7777 /var/www
-    find /var/www -type d -exec sudo chmod 7777 {} \;
-    find /var/www -type f -exec sudo chmod 7777 {} \;
+    
+Type sudo chown -R root:www /var/www
+    
+sudo chmod 7777 /var/www
+    
+find /var/www -type d -exec sudo chmod 7777 {} \;
+    
+find /var/www -type f -exec sudo chmod 7777 {} \;
    (You can set the permission as per required for example : 2775 or 0664)
 
 8. Test your Lamp/apache webserver
-    Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
-   Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
-   Now go in browser and paste it and edit the url by adding /phpinfo.php
-   Now you can see the phpinfo page.
+    
+Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+   
+Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
+   
+Now go in browser and paste it and edit the url by adding /phpinfo.php
+   
+Now you can see the phpinfo page.
    
 That's it you are done configuring your webserver.
 
+
 #Adding files in your webserver via FileZilla
+
+
 For this step please take a note of your public DNS or IP.
+
 1. Download and install filezilla, and then open it.
-      In the host name enter the public DNS or ip.
-      In username enter ec2-user.
-      In port enter 22.
-      Click quick connect.
-      Select yes for authentication.
+      
+In the host name enter the public DNS or ip.
+      
+In username enter ec2-user.
+      
+In port enter 22.
+      
+Click quick connect.
+      
+Select yes for authentication.
+
 
 Now you are connected to your instance via FileZilla.
+
 
 2. Go to folder var/www/html/ and paste your website.
 
