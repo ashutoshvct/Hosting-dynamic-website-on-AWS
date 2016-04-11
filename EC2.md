@@ -18,11 +18,11 @@
 
 7. Now, click next configure Security Groups--->create new security group-->Enter security group name and description for it.
 
-8. Now, add rules to your instance--select type SSH--- in source select my ip from drop down.
+8. Now, add rules to your instance---select type SSH---in source select my ip from drop down.
    
-    Add another rule--select type HTTP---in source select anywhere from drop down.
+ >   Add another rule--select type HTTP---in source select anywhere from drop down.
    
-    Add another rule--select type HTTPS---in source select anywhere from drop down.
+ >   Add another rule--select type HTTPS---in source select anywhere from drop down.
 
 9. Click on review and launch, here you can confirm your selections and click launch.
 
