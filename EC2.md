@@ -116,7 +116,7 @@ For this step please take a note of your public DNS or IP.
       
    Select yes for authentication.
 
-Now you are connected to your instance via FileZilla.
+//Now you are connected to your instance via FileZilla.//
 
 2. Go to folder var/www/html/ and paste your website.
 
