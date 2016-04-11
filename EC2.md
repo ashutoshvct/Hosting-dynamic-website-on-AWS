@@ -146,4 +146,5 @@ For this step please take a note of your public DNS or IP.
       In the value paste the public IP of the instance.
       
       Then, Click Create.
-    
+   
+4. Now you can go to your browser and enter your domain to view your website.
