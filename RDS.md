@@ -64,52 +64,53 @@ Now we have created an DB instance.
 
 4. Download and install mysql Workbench.
    
-   Now open it.
+   > Now open it.
 
-    Create a new connection by clicking on '+'.
+   > Create a new connection by clicking on '+'.
    
-    Enter the connection name of your choice.
+   > Enter the connection name of your choice.
 
-    In connection method option Select Standard TCP/IP over SSH.
+   > In connection method option Select Standard TCP/IP over SSH.
 
-    Now Go to AWS console and select EC2 service and then copy your public DNS.
+   > Now Go to AWS console and select EC2 service and then copy your public DNS.
 
-    Now comeback to the workbench settings and paste it in the ssh hostname.
+   > Now comeback to the workbench settings and paste it in the ssh hostname.
 
-    Then, enter the ssh username ec2-user.
+   > Then, enter the ssh username ec2-user.
 
-    In ssh key file, point it to the file that we downloaded.
+   > In ssh key file, point it to the file that we downloaded.
 
-    Now, go back to AWS console and select RDS service.
+   > Now, go back to AWS console and select RDS service.
 
-    Select your database instance and copy the endpoint.
+   > Select your database instance and copy the endpoint.
 
-    Now, comeback to Mysql Workbench and paste it in mysql hostname.
+   > Now, comeback to Mysql Workbench and paste it in mysql hostname.
 
-    Enter server port number 3306.
+   > Enter server port number 3306.
 
-    Enter the username that you had entered while creating the DB Instance for your database.
-<b>(If you don't remember the username go to RDS service and select your instance and then click on instance actions and then see details)</b>
+   > Enter the username that you had entered while creating the DB Instance for your database.
+   
+   <b>(If you don't remember the username go to RDS service and select your instance and then click on instance actions and then see details)</b>
  
-    Enter the password for it.
+   > Enter the password for it.
  
-    Now click on test connection to test it.
+   > Now click on test connection to test it.
  
-    If connection was successful click ok.
+   > If connection was successful click ok.
 
 
-Now, we have established a very secure connection to our database instance.
+<b>Now, we have established a very secure connection to our database instance.</b>
 
 
 5. Now, Create a new database and name it whatever you want.
 <b>(No need to create a new one if you have already created)</b>
   
     
-   In the Left panel select import/restore.
+   >   In the Left panel select import/restore.
 
-      Then select import from Self contained file and point it to our database.
+   >   Then select import from Self contained file and point it to our database.
 
-      In default target schema, select the schema of your choice and click start import.
+   >   In default target schema, select the schema of your choice and click start import.
 
 <b>Now, we have imported the database and now you can make changes to the database.</b>
 
