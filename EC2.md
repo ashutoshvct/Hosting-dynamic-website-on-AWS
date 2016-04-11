@@ -48,48 +48,50 @@ You have now created an instance, now you will have to install an apache server 
 3. Now go back to your browser and copy the example and paste it in your terminal/shell---->it will ask for authentication type yes.
 <b>(Now you are connected to your instance)</b>
 
-4. Type sudo yum update -y
+4. Type 
+   
+   > sudo yum update -y
 
-    sudo yum upgrade -y
+   > sudo yum upgrade -y
    
-    sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+   > sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
    
-    sudo service httpd start
+   > sudo service httpd start
    
-    sudo chkconfig httpd on
+   > sudo chkconfig httpd on
 
 5. To check if you have successfully installed the webserver, go to EC2 instance page and select your instance and then see public DNS at the bottom of the page.
    
-    Copy that and paste in the web browser, you will see an apache server page.
+  >  Copy that and paste in the web browser, you will see an apache server page.
 
 6. Go back to your terminal/shell/cmd.
    
-   Type sudo groupadd www
+   > Type sudo groupadd www
    
-   Type sudo usermod -a -G www ec2-user
+   > Type sudo usermod -a -G www ec2-user
    (Here ec2-user is your username example ec2-user@ip)
    
-   Type exit/quit.
+   > Type exit/quit.
    
   <b> Note exit or quit command is necessary for the changes to take place.</b>
 
 7. Connect to your instance again via terminal/shell/cmd.
     
-   Type groups
+  >  Type groups
    <b>(Here you will see www is added to the group)</b>
     
-   Type sudo chown -R root:www /var/www
+   > Type sudo chown -R root:www /var/www
     
-   sudo chmod 7777 /var/www
+   > sudo chmod 7777 /var/www
     
-   find /var/www -type d -exec sudo chmod 7777 {} \;
+   > find /var/www -type d -exec sudo chmod 7777 {} \;
     
-   find /var/www -type f -exec sudo chmod 7777 {} \;
+   > find /var/www -type f -exec sudo chmod 7777 {} \;
    <b>(You can set the permission as per required for example : 2775 or 0664)</b>
 
 8. Test your Lamp/apache webserver
     
-   Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+   > Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
    
    Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
    
@@ -107,15 +109,15 @@ For this step please take a note of your public DNS or IP.
 
 1. Download and install filezilla, and then open it.
       
-   In the host name enter the public DNS or ip.
+   > In the host name enter the public DNS or ip.
       
-   In username enter ec2-user.
+   > In username enter ec2-user.
       
-   In port enter 22.
+   > In port enter 22.
       
-   Click quick connect.
+   > Click quick connect.
       
-   Select yes for authentication.
+   > Select yes for authentication.
 
    <b>Now you are connected to your instance via FileZilla.</b>
 
@@ -133,18 +135,18 @@ For this step please take a note of your public DNS or IP.
 3. Now, click on Create record set.
 
 
-      Select type "A-IPv4 address".
+   > Select type "A-IPv4 address".
       
-      In the value paste the public IP of the instance.
+   >   In the value paste the public IP of the instance.
       
-      Then, Click Create.
+   >   Then, Click Create.
       
-      Create an another record set and now in the name field add www .
+   >   Create an another record set and now in the name field add www .
       
-      Select type "A-IPv4 address"
+   >  Select type "A-IPv4 address"
       
-      In the value paste the public IP of the instance.
+   >   In the value paste the public IP of the instance.
       
-      Then, Click Create.
+   >  Then, Click Create.
    
 4. Now you can go to your browser and enter your domain to view your website.
