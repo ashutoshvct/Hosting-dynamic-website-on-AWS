@@ -64,9 +64,8 @@ Now we have created an DB instance.
 
 4. Download and install mysql Workbench.
    
-    
    Now open it.
-   
+
     Create a new connection by clicking on '+'.
    
     Enter the connection name of your choice.
