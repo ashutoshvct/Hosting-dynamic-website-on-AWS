@@ -74,29 +74,29 @@ You have now created an instance, now you will have to install an apache server 
 
 7. Connect to your instance again via terminal/shell/cmd.
     
-Type groups
+   Type groups
    (Here you will see www is added to the group)
     
-Type sudo chown -R root:www /var/www
+   Type sudo chown -R root:www /var/www
     
-sudo chmod 7777 /var/www
+   sudo chmod 7777 /var/www
     
-find /var/www -type d -exec sudo chmod 7777 {} \;
+   find /var/www -type d -exec sudo chmod 7777 {} \;
     
-find /var/www -type f -exec sudo chmod 7777 {} \;
+   find /var/www -type f -exec sudo chmod 7777 {} \;
    (You can set the permission as per required for example : 2775 or 0664)
 
 8. Test your Lamp/apache webserver
     
-Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+   Type echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
    
-Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
+   Go to your AWS console----> EC2 ----> select your instance---> Copy the public DNS.
    
-Now go in browser and paste it and edit the url by adding /phpinfo.php
+   Now go in browser and paste it and edit the url by adding /phpinfo.php
    
-Now you can see the phpinfo page.
+   Now you can see the phpinfo page.
    
-That's it you are done configuring your webserver.
+   That's it you are done configuring your webserver.
 
 
 #Adding files in your webserver via FileZilla
@@ -106,15 +106,15 @@ For this step please take a note of your public DNS or IP.
 
 1. Download and install filezilla, and then open it.
       
-In the host name enter the public DNS or ip.
+   In the host name enter the public DNS or ip.
       
-In username enter ec2-user.
+   In username enter ec2-user.
       
-In port enter 22.
+   In port enter 22.
       
-Click quick connect.
+   Click quick connect.
       
-Select yes for authentication.
+   Select yes for authentication.
 
 
 Now you are connected to your instance via FileZilla.
