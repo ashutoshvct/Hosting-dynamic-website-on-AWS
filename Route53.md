@@ -1,3 +1,7 @@
+<b>What is Route 53? </b>
+
+>Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service. It is designed to give developers and businesses an extremely reliable and cost effective way to route end users to Internet applications by translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each other.
+
 #Migrating your domain to Amazon Route 53
 
 This step is optional but recommended.
