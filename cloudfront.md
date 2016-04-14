@@ -1,3 +1,7 @@
+<b>What is CloudFront?</b>
+
+>Amazon CloudFront is a global content delivery network (CDN) service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.
+
 #Creating a CloudFront distribution to speedup our website
 
 1. Go to AWS Console
