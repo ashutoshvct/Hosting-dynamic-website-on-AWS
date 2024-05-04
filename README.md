@@ -2,7 +2,7 @@
 
 > Below are some steps for you to follow.
 
-> If you need any help please contact me on ashutosh.vct@gmail.com 
+> If you need any help please contact me on ashutosham1995@gmail.com 
 
 <b>We will use the following services - EC2, Route 53, CloudFront, RDS and VPC.
 
